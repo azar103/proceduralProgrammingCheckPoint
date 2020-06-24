@@ -33,7 +33,7 @@ BEGIN
 
     //compare the vectore by pair
     FOR i FROM 0 TO n*2 - 1 STEP 1  DO
-        FOR k FROM i+1 TO n*2 - 1 STEP step  DO
+        FOR k FROM i+1 TO n*2 - 1 STEP 1  DO
             dot_product(Vi, Vk, length)
             IF (ps == 0) THEN
                 Write(Vi+" and "+Vk+" are orthogonal")
