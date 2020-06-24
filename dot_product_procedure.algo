@@ -1,0 +1,46 @@
+PROCEDURE dot_product(VAR T1: ARRAY_OF INTEGER,VAR T2: ARRAY_OF INTEGER, VAR N:=INTEGER)
+VAR
+
+BEGIN
+    FOR i FROM 0 TO N-1 STEP 1  DO
+        ps := ps + T1[i] * T2[i]
+    END_FOR
+    Write(ps)
+END
+
+ALGORITHM algorithm_name
+VAR
+    length: INTEGER;
+    n : INTEGER;
+    i :INTEGER;
+    j :INTEGER;
+    k :INTEGER;
+    ps : INTEGER = 0;
+BEGIN
+
+    Write("give a number of pair")
+    Read(n)
+    Write("give a length :")
+    Read(length)
+
+    //add the vectors
+    FOR i FROM 0 TO n*2 - 1 STEP 1  DO
+       FOR j FROM 0 TO length-1 STEP 1  DO
+           Write("enter a number :")
+           Read(Vi[j])
+       END_FOR
+    END_FOR
+
+    //compare the vectore by pair
+    FOR i FROM 0 TO n*2 - 1 STEP 1  DO
+        FOR k FROM i+1 TO n*2 - 1 STEP step  DO
+            dot_product(Vi, Vk, length)
+            IF (ps == 0) THEN
+                Write(Vi+" and "+Vk+" are orthogonal")
+            END_IF
+        END_FOR
+    END_FOR
+
+
+  
+END
