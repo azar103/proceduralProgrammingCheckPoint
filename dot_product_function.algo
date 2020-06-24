@@ -36,7 +36,7 @@ BEGIN
     FOR i FROM 0 TO n*2 - 1 STEP 1  DO
         FOR k FROM i+1 TO n*2 - 1 STEP step  DO
             product_scalar := dot_product(Vi, Vk, length)
-            IF (product_sclar == 0) THEN
+            IF (product_scalar == 0) THEN
                 Write(Vi+" and "+Vk+" are orthogonal")
             END_IF
         END_FOR
